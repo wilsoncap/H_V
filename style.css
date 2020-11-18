@@ -1,0 +1,46 @@
+
+.contenedor{
+    margin: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "perfil    titulo          titulo"
+                        "perfil     about           estudio"
+                        "perfil     proyectos       skill";
+}
+
+
+.caja{
+    height: 30px;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+
+.contenedor .perfil{
+    background-color: blueviolet;
+    /* grid-column-start: perfil;
+    grid-column-end: perfil; */
+
+    grid-row-start: perfil;
+    grid-row-end: perfil;
+
+    /* grid-column: perfil;
+    grid-row: perfil; */
+/* 
+    grid-area: perfil; */
+}
+
+.titulo{
+    background-color: aqua;
+    grid-column-start: titulo;
+    grid-column-end: titulo;
+}
+
+.estudio{
+ background-color: chartreuse;
+}
+.about{
+    background-color: rgb(223, 14, 195);
+
+}
