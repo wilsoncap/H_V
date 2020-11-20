@@ -1,10 +1,12 @@
 
 .contenedor{
-    margin: 20px;
+    width: 100%;
+    margin-top: 10px;
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 400px repeat(2, minmax(300px, auto));
-    grid-template-rows: 60px repeat(2, minmax(400px, auto));
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-columns:  repeat(3, 300px);
+    grid-template-rows: 60px repeat(2, minmax(280px, auto));
     grid-template-areas: "perfil   titulo          titulo"
                         "perfil     about           estudio"
                         "perfil    proyectos       skill";
@@ -13,7 +15,7 @@
 
 .caja{
     width: 100%;
-    background-color: cornflowerblue;
+    background-color: rgb(255, 255, 255);
     border-radius: 60px;
     box-shadow: 4px 4px 10px #aaa;
     display: flex;
@@ -22,20 +24,29 @@
 }
 
 .contenedor .perfil{
-    background-color: blueviolet;
     grid-row: perfil;
+    display: inherit;
+    justify-content: center;
+    
+    
+    
+}
+
+.foto_p{
+    width: 9em;
 }
 
 .titulo{
-    background-color: aqua;
+    background-color: rgb(0, 168, 263);
     grid-column-start: titulo;
     grid-column-end: titulo;
 }
 
 .estudio{
- background-color: chartreuse;
+  //--  
 }
+
 .about{
-    background-color: rgb(223, 14, 195);
+    //--
 
 }
