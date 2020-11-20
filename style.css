@@ -3,32 +3,27 @@
     margin: 20px;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 200px 1fr 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "perfil    titulo          titulo"
+    grid-template-columns: 400px repeat(2, minmax(300px, auto));
+    grid-template-rows: 60px repeat(2, minmax(400px, auto));
+    grid-template-areas: "perfil   titulo          titulo"
                         "perfil     about           estudio"
-                        "perfil     proyectos       skill";
+                        "perfil    proyectos       skill";
 }
 
 
 .caja{
-    height: 30px;
     width: 100%;
     background-color: cornflowerblue;
+    border-radius: 60px;
+    box-shadow: 4px 4px 10px #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor .perfil{
     background-color: blueviolet;
-    /* grid-column-start: perfil;
-    grid-column-end: perfil; */
-
-    grid-row-start: perfil;
-    grid-row-end: perfil;
-
-    /* grid-column: perfil;
-    grid-row: perfil; */
-/* 
-    grid-area: perfil; */
+    grid-row: perfil;
 }
 
 .titulo{
