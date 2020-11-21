@@ -1,3 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: rgb(252, 249, 249);
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
 .contenedor{
     width: 100%;
@@ -5,7 +13,7 @@
     display: grid;
     justify-content: center;
     grid-gap: 10px;
-    grid-template-columns:  repeat(3, 300px);
+    grid-template-columns: 300px repeat(2, 300px);
     grid-template-rows: 60px repeat(2, minmax(280px, auto));
     grid-template-areas: "perfil   titulo          titulo"
                         "perfil     about           estudio"
@@ -17,24 +25,60 @@
     width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 60px;
-    box-shadow: 4px 4px 10px #aaa;
+    box-shadow: 3px 3px 10px #aaa;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .contenedor .perfil{
     grid-row: perfil;
-    display: inherit;
-    justify-content: center;
-    
-    
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
-.foto_p{
-    width: 9em;
+.perfil .foto_p{
+    width: 11em;
 }
+
+.perfil h1{
+    font-size: 1.4em;
+    color: rgb(121, 121, 121);
+}
+
+.perfil .separador{
+    width: 2em;
+}
+
+.perfil .separador:before{
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 150px; 
+    background: rgb(228, 9, 9);
+}
+
+.perfil .separador::after{
+    content: "";  
+}
+
+.aliniacion h2{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: .4em;
+    margin-top: 0.4em;
+    color: rgb(93, 93, 93);
+}
+
+.info {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 0;
+}
+
+
 
 .titulo{
     background-color: rgb(0, 168, 263);
